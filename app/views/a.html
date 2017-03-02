@@ -1,0 +1,128 @@
+﻿<div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">首页</a></li>
+        <li class="active"><a href="#">增加</a></li>
+        <li class="active"><a ui-sref="c">图表</a></li>
+       <li class="active"><a ui-sref="dengl">退出</a></li>
+        <li class="active"><a ui-sref="daohang">测试:张三</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+<!--<table class="table table-condensed">-->
+  <!--<tr  ng-repeat="x in data">-->
+    <!--<td>{{x.title}}</td>-->
+    <!--<td>{{x.content}}</td>-->
+  <!--</tr>-->
+<!--</table>-->
+  <form role="form" class="ng-pristine ng-valid">
+    <div class="form-group">
+      <input type="text" class="form-control input-lg"  id="feedbackinput" placeholder="title" ng-model="summary">
+    </div>
+
+    <div class="form-group">
+    	<!--<select class="form-control">-->
+         <!--<option ng-model="updata2.classify " value="0">ui</option>-->
+         <!--<option ng-model="updata2.classify " value="1">前端</option>-->
+         <!--<option ng-model="updata2.classify " value="2">后台</option>-->
+      <!--</select>-->
+      <div class="classify" id="classif">
+        <label>
+          <input type="radio" value="0" ng-model='classify' />设计
+        </label>
+        <label>
+          <input type="radio" value="1" ng-model='classify'/>前端
+        </label>
+        <label>
+          <input type="radio" value="2" ng-model='classify'/>后台
+        </label>
+      </div>
+      <!-- 指定给谁 -->
+      <div id="too" style="display:none">
+        <p id="to">指定给:</p>
+        <!-- ui人员 -->
+        <div class="wyc" style="display:none">
+          <label>
+            <input type="radio" value="wyc" ng-model='to' />wyc
+          </label>
+          <label>
+            <input type="radio" value="fbb" ng-model='to' />fbb
+          </label>
+        </div>
+        <!-- 前端 -->
+        <div class="lnn" style="display:none">
+          <label>
+            <input type="radio" value="lnn" ng-model='to' />lnn
+          </label>
+        </div>
+        <!-- 后台 -->2
+        <div class="jgr" style="display:none">
+          <label>
+            <input type="radio" value="jgr" ng-model='to' />jgr
+          </label>
+        </div>
+
+      </div>
+
+      <div class="radio">
+  <label>
+    <input ng-model="importance" type="radio" name="optionsRadios" id="optionsRadios1" value="0" checked>
+    重要
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input ng-model="importance" type="radio" name="optionsRadios" id="optionsRadios2" value="1">
+    中等
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input ng-model="importance" type="radio" name="optionsRadios" id="optionsRadios3" value="2">
+    一般
+  </label>
+</div>
+    </div>
+
+
+    <div class="radio">
+  <label>
+    <input ng-model="frequency " type="radio" name="optionsRadios1" id="optionsRadios2" value="0">
+    经常
+  </label>
+</div>
+
+<div class="radio">
+  <label>
+    <input ng-model="frequency " type="radio" name="optionsRadios1" id="optionsRadios2" value="1">
+    偶尔
+  </label>
+</div>
+
+    <div class="form-group">
+    	<summernote ng-model="description"></summernote>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="add()" style="float:right;">save</button>
+  </form>
+  <!--<input ng-model="updata.title" type="text" />-->
+<!--<input ng-model="updata.content" type="text" />-->
+
+</div>
+
+
+
+
